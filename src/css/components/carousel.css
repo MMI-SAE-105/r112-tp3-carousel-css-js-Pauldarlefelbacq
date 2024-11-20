@@ -2,7 +2,9 @@
 /* Ajuste la hauteur de l'image automatiquement pour conserver les proportions - https://developer.mozilla.org/fr/docs/Web/CSS/height */
 img {
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+
 }
 
 /* Mise en forme du carousel en CSS.
@@ -48,11 +50,27 @@ scroll-snap-type: x mandatory;  /* Définit le type de défilement pour accroche
 }
 
 .carousel__item {
-flex: 1 0 auto;  /* L'élément prend 1 part de l'espace disponible, ne rétrécit pas, et a une largeur de base de 260px - https://developer.mozilla.org/fr/docs/Web/CSS/flex */
+flex: 1 0 100%;  /* L'élément prend 1 part de l'espace disponible, ne rétrécit pas, et a une largeur de base de 260px - https://developer.mozilla.org/fr/docs/Web/CSS/flex */
 scroll-snap-align: center;  /* Aligne l'élément au centre lors du défilement - https://developer.mozilla.org/fr/docs/Web/CSS/scroll-snap-align */
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .carousel__item img {
 display: block;  /* Affiche l'image comme un bloc - https://developer.mozilla.org/fr/docs/Web/CSS/display */
 }
 
+.carousel__lien{
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.lien__interne{
+  list-style: none;
+  display: inline-block;
+  margin: 1%;
+}
