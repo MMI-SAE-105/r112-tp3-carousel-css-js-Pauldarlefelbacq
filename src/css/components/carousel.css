@@ -35,9 +35,18 @@ align-items: center;  /* Aligne le contenu du bouton au centre verticalement - h
 justify-content: center;  /* Centre le contenu du bouton horizontalement - https://developer.mozilla.org/fr/docs/Web/CSS/justify-content */
 border: 1px;  /* Bordure solide de 1px - https://developer.mozilla.org/fr/docs/Web/CSS/border */
 border-radius: 100%;  /* Bordure arrondie pour faire un cercle - https://developer.mozilla.org/fr/docs/Web/CSS/border-radius */
+position:absolute;
+top: 50%;
+transform: translateY(-50%);
+padding: 10px;
 }
 .carousel__button--prev {
 transform: rotate(0.5turn);  /* Fait pivoter le bouton de 180 degrés - https://developer.mozilla.org/fr/docs/Web/CSS/transform */
+left: 10px;
+}
+
+.carousel__button--next {
+  right: 10px;
 }
 
 .carousel__container {
